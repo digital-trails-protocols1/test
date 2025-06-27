@@ -2,7 +2,7 @@
   "icon": "/assets/home_mindtrails.png",
   "home": {
     "title": "MindTrails",
-    "elements": {"type":"list", "elements":[
+    "element": {"type":"list", "elements":[
       {
         "type": "alert",
         "title": "Alert title",
