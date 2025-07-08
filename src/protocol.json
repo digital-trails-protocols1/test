@@ -131,10 +131,18 @@
     {
       "type": "random",
       "days": 7,
-      "content": [
-        "flow://flows/how was your day%3f",
-        "flow://flows/survey2",
-        "flow://flows/survey3"
+      "Actions": [
+        {
+          "action": "flow://flows/how was your day%3f",
+          "expiry": "11:00"
+        },
+        {
+          "action": "flow://flows/survey2",
+          "expiry": "12:00"
+        },
+        {
+          "action": "flow://flows/survey3"
+        }
       ]
     }
   ],
