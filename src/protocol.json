@@ -140,13 +140,14 @@
       "days": 7,
       "triggers": [
         {
+          "time": "10:00",
           "action": {
             "path": "flow://flows/survey2",
             "expiry": "11:00"
           }
         },
         {
-          "default-time": "04:00",
+          "time": "04:00",
           "open": "03:00",
           "close": "06:00",
           "action": {
@@ -155,6 +156,7 @@
           }
         },
         {
+          "time": "11:00",
           "action": {
             "path": "flow: //flows/survey3"
           }
