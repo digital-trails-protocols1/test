@@ -138,28 +138,22 @@
       "type": "random",
       "event-type": "silentNotification",
       "days": 7,
-      "triggers": [
+      "actions": [
         {
           "time": "10:00",
-          "action": {
-            "path": "flow://flows/survey2",
-            "expiry": "11:00"
-          }
+          "path": "flow://flows/survey2",
+          "expiry": "11:00"
         },
         {
           "time": "04:00",
           "open": "03:00",
           "close": "06:00",
-          "action": {
-            "path": "flow://flows/survey2",
-            "expiry": "11:00"
-          }
+          "path": "flow: //flows/survey2",
+          "expiry": "11: 00"
         },
         {
-          "time": "11:00",
-          "action": {
-            "path": "flow: //flows/survey3"
-          }
+          "time": "11: 00",
+          "path": "flow: //flows/survey3"
         }
       ]
     }
