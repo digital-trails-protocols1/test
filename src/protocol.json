@@ -138,20 +138,26 @@
       "type": "random",
       "event-type": "silentNotification",
       "days": 7,
-      "actions": [
+      "triggers": [
         {
-          "action": "flow://flows/howwasyourday%3f",
-          "expiry": "11:00"
+          "action": {
+            "path": "flow://flows/survey2",
+            "expiry": "11:00"
+          }
         },
         {
-          "action": "flow://flows/survey2",
-          "expiry": "05:00",
           "default-time": "04:00",
           "open": "03:00",
-          "close": "06:00"
+          "close": "06:00",
+          "action": {
+            "path": "flow://flows/survey2",
+            "expiry": "11:00"
+          }
         },
         {
-          "action": "flow://flows/survey3"
+          "action": {
+            "path": "flow: //flows/survey3"
+          }
         }
       ]
     }
@@ -160,7 +166,7 @@
     {
       "type": "Location",
       "optional": true,
-      "interval": "00:00:01",
+      "interval": "00: 00: 01",
       "accuracy": 5
     }
   ]
