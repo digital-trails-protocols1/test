@@ -111,33 +111,27 @@
   "triggers": [
     {
       "type": "timing",
-      "event-type": "silentNotification",
-      "frequency": "00:05:00",
-      "action": {
-        "path": "flow://flows/how was your day%3F"
-      }
+      "action": "notification",
+      "content": "flow://flows/survey1",
+      "frequency": "00:05:00"
     },
     {
       "type": "timing",
-      "event-type": "silentNotification",
-      "frequency": "00:01:00",
-      "action": {
-        "path": "flow://flows/survey2"
-      }
+      "action": "notification",
+      "content": "flow://flows/survey2",
+      "frequency": "01:00:00"
     },
     {
       "type": "timing",
-      "event-type": "silentNotification",
+      "action": "notification",
+      "content": "flow://flows/survey3",
       "frequency": "1",
-      "time": "08:00",
-      "action": {
-        "path": "flow://flows/survey3"
-      }
+      "time": "08:00"
     },
     {
       "type": "random",
-      "event-type": "silentNotification",
       "days": 7,
+      "action": "notification",
       "actions": [
         {
           "time": "10:00",
