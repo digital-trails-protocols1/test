@@ -1,11 +1,11 @@
 {
   "information"{
-    "header_text": "Information Forever",
-    "content": "This is an information Popup",
-    "icon": {
-      "url": "/assets/home_banner.png",
-      "tint": false
-    },
+    "elements": [
+      {
+        "type": "Media",
+        "url": "/assets/home_banner.png"
+      }
+    ],
     "position": "before",
     "condition": null,
     "information_count": -1
