@@ -6,7 +6,7 @@
         "url": "/assets/home_banner.png"
       }
     ],
-    "position": "before",
+    "position": "after",
     "condition": null,
     "information_count": -1
   }
