@@ -113,7 +113,7 @@
       "type": "timing",
       "action": "notification",
       "content": {
-        "path": "flow://flows/survey3"
+        "path": "flow://flows/survey2"
       },
       "frequency": "00:05:00"
     },
