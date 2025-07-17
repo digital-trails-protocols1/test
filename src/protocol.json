@@ -113,7 +113,7 @@
       "type": "timing",
       "action": "notification",
       "content": {
-        "path": "flow://flows/survey2"
+        "path": "flow://flows/survey1"
       },
       "frequency": "00:05:00"
     },
@@ -123,7 +123,7 @@
       "frequency": "1",
       "content": {
         "time": "08:00",
-        "path": "flow://flows/survey3",
+        "path": "flow://flows/survey2",
         "expiry": "11:00"
       }
     },
@@ -134,19 +134,19 @@
       "actions": [
         {
           "time": "10:00",
-          "path": "flow://flows/survey2",
+          "path": "flow://flows/random1",
           "expiry": "11:00"
         },
         {
           "time": "04:00",
           "open": "03:00",
           "close": "06:00",
-          "path": "flow: //flows/survey2",
+          "path": "flow: //flows/random2",
           "expiry": "11:00"
         },
         {
           "time": "11:00",
-          "path": "flow: //flows/survey3"
+          "path": "flow: //flows/random3"
         }
       ]
     }
