@@ -112,15 +112,20 @@
     {
       "type": "timing",
       "action": "notification",
-      "content": "flow://flows/survey2",
+      "content": {
+        "path": "flow://flows/survey3"
+      },
       "frequency": "00:05:00"
     },
     {
       "type": "timing",
       "action": "notification",
-      "content": "flow://flows/survey3",
       "frequency": "1",
-      "time": "08:00"
+      "content": {
+        "time": "08:00",
+        "path": "flow://flows/survey3",
+        "expiry": "11:00"
+      }
     },
     {
       "type": "random",
