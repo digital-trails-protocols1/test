@@ -11,7 +11,7 @@
           "message": "Alert message",
           "icon": {
             "url": "/assets/home_banner.png",
-            "tint": false
+            "tint": true
           }
         },
         {
