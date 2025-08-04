@@ -15,6 +15,37 @@
           }
         },
         {
+          "type": "goals",
+          "goals": [
+            {
+              "service": "WisePill",
+              "type": "percentage",
+              "field": "event",
+              "days": 7,
+              "bounds": [
+                {
+                  "lower-bound": 0,
+                  "upper-bound" .6,
+                  "text": "You're no",
+                  "color": "#ff9187"
+                },
+                {
+                  "lower-bound": .6,
+                  "upper-bound" .8,
+                  "text": "You're no",
+                  "color": "#F5E050"
+                }
+                {
+                  "lower-bound": .8,
+                  "upper-bound" 1,
+                  "text": "You're no",
+                  "color": "#65bf65"
+                }
+              ]
+            }
+          ]
+      },
+        {
           "type": "sessions",
           "left": {
             "text": "{0} Sessions Completed",
