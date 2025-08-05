@@ -35,21 +35,21 @@
                   "lower-bound": 0,
                   "upper-bound": 0.6,
                   "text": "You're missing several doses. Please try to take your medication more consistently.",
-                  "summary": "Low Adherence".
+                  "summary": "Low Adherence",
                   "color": "#ff9187"
                 },
                 {
                   "lower-bound": 0.6,
                   "upper-bound": 0.8,
                   "text": "You're taking most of your doses. A little more consistency will help.",
-                  "summary": "Moderate Adherence".
+                  "summary": "Moderate Adherence",
                   "color": "#F5E050"
                 },
                 {
                   "lower-bound": 0.8,
                   "upper-bound": 1,
                   "text": "You're consistently taking your medication. Keep it up!",
-                  "summary": "High Adherence".
+                  "summary": "High Adherence",
                   "color": "#65bf65"
                 }
               ]
