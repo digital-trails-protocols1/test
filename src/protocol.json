@@ -18,6 +18,14 @@
           "type": "goals",
           "goals": [
             {
+              "service": "Oura",
+              "type": "percentile",
+              "show-loading": true,
+              "field": "active",
+              "days": 10,
+              "percentile": .6
+            },
+            {
               "service": "WisePill",
               "type": "wisepill",
               "field": "event",
