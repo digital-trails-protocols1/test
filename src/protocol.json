@@ -19,26 +19,26 @@
           "goals": [
             {
               "service": "WisePill",
-              "type": "percentage",
+              "type": "wisepill",
               "field": "event",
               "days": 7,
               "bounds": [
                 {
                   "lower-bound": 0,
                   "upper-bound": 0.6,
-                  "text": "You're below target",
+                  "text": "You're missing several doses. Please try to take your medication more consistently.",
                   "color": "#ff9187"
                 },
                 {
                   "lower-bound": 0.6,
                   "upper-bound": 0.8,
-                  "text": "You're close to your goal",
+                  "text": "You're taking most of your doses. A little more consistency will help.",
                   "color": "#F5E050"
                 },
                 {
                   "lower-bound": 0.8,
                   "upper-bound": 1,
-                  "text": "You're meeting your goal",
+                  "text": "You're consistently taking your medication. Keep it up!",
                   "color": "#65bf65"
                 }
               ]
