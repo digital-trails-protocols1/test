@@ -19,6 +19,16 @@
 			"min": 1,
 			"max": 7,
 			"others": ["a","b","c"]
+        },
+				{
+			"type":"Text",
+			"text":"With 'Other' Other Options"
+		},
+        {
+            "type": "Slider",
+			"min": 1,
+			"max": 7,
+			"others": ["a","b","!Other"]
         }
     ]
 }
