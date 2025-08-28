@@ -6,55 +6,7 @@
       "type": "list",
       "elements": [
         {
-          "type": "alert",
-          "title": "Alert title",
-          "message": "Alert message",
-          "icon": {
-            "url": "/assets/home_banner.png",
-            "tint": true
-          }
-        },
-        {
-          "type": "goals",
-          "goals": [
-            {
-              "service": "Oura",
-              "type": "percentile",
-              "show-loading": true,
-              "field": "active",
-              "days": 10,
-              "percentile": .6
-            },
-            {
-              "service": "WisePill",
-              "type": "wisepill",
-              "field": "event",
-              "days": 7,
-              "bounds": [
-                {
-                  "lower-bound": 0,
-                  "upper-bound": 0.6,
-                  "text": "You're missing several doses. Please try to take your medication more consistently.",
-                  "summary": "Low Adherence",
-                  "color": "#ff9187"
-                },
-                {
-                  "lower-bound": 0.6,
-                  "upper-bound": 0.8,
-                  "text": "You're taking most of your doses. A little more consistency will help.",
-                  "summary": "Moderate Adherence",
-                  "color": "#F5E050"
-                },
-                {
-                  "lower-bound": 0.8,
-                  "upper-bound": 1,
-                  "text": "You're consistently taking your medication. Keep it up!",
-                  "summary": "High Adherence",
-                  "color": "#65bf65"
-                }
-              ]
-            }
-          ]
+          "type": "goals"
         },
         {
           "type": "sessions",
@@ -156,6 +108,9 @@
       "icon": "/assets/menu_home.png"
     }
   ],
+  "settings": {
+    "configs": "flow://flows/configs"
+  },
   "triggers": [
     {
       "type": "timing",
@@ -181,19 +136,17 @@
       "action": "notification",
       "actions": [
         {
-          "time": "10:00",
+          "time": "${random1_time}",
           "path": "flow://flows/random1",
           "expiry": "11:00"
         },
         {
-          "time": "04:00",
-          "open": "03:00",
-          "close": "06:00",
+          "time": "${random2_time}",
           "path": "flow://flows/random2",
           "expiry": "11:00"
         },
         {
-          "time": "11:00",
+          "time": "${random3_time}",
           "path": "flow://flows/random3"
         }
       ]
@@ -205,6 +158,97 @@
       "optional": true,
       "interval": "00:00:01",
       "accuracy": 5
+    }
+  ],
+  "devices": [
+    {
+      "type": "Oura",
+      "channel": "Api",
+      "path": "https://api.ouraring.com/v2/usercollection",
+      "androidsync": "deeplink://com.ouraring.oura",
+      "iossync": "deeplink://Oura://",
+      "endpoints": [
+        {
+          "path": "sleep",
+          "days": 1,
+          "writesdatum": true
+        },
+        {
+          "path": "workout",
+          "days": 1,
+          "writesdatum": true
+        },
+        {
+          "path": "daily_activity",
+          "days": 10,
+          "writesdatum": true,
+          "goals": [
+            {
+              "type": "percentile",
+              "show-loading": true,
+              "field": "active",
+              "days": 10,
+              "percentile": 0.6
+            }
+          ],
+          "triggers": [
+            {
+              "prompt": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help.",
+              "timewindowdays": 1,
+              "aggregation": "sum",
+              "condition": [
+                "non_wear_time",
+                ">",
+                "36000"
+              ]
+            },
+            {
+              "prompt": "Hi! Your step count is low, make sure you to walk and stay active.",
+              "timewindowdays": 1,
+              "aggregation": "sum",
+              "condition": [
+                "steps",
+                "<",
+                "2000"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "WisePill",
+      "channel": "Webhook",
+      "goals": [
+        {
+          "type": "binarypercentage",
+          "field": "event",
+          "days": 7,
+          "bounds": [
+            {
+              "lower-bound": 0,
+              "upper-bound": 0.6,
+              "text": "You're missing several doses. Please try to take your medication more consistently.",
+              "summary": "Low Adherence",
+              "color": "#ff9187"
+            },
+            {
+              "lower-bound": 0.6,
+              "upper-bound": 0.8,
+              "text": "You're taking most of your doses. A little more consistency will help.",
+              "summary": "Moderate Adherence",
+              "color": "#F5E050"
+            },
+            {
+              "lower-bound": 0.8,
+              "upper-bound": 1,
+              "text": "You're consistently taking your medication. Keep it up!",
+              "summary": "High Adherence",
+              "color": "#65bf65"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+    "header_text": "Select Survey Time",
+    "header_icon": "assets/subtitle.png",
+    "elements": [
+        {
+            "type": "Text",
+            "text": "Choose when you want to be notified for random2 survey."
+        },
+        {
+            "type": "Scheduler",
+            "open": "03:00",
+            "close": "06:00",
+            "count": 1,
+            "variable_name": "global://random2_time"
+        }
+    ]
+}
