@@ -136,16 +136,19 @@
       "action": "notification",
       "actions": [
         {
+          "default_time": "14:00",
           "time": "${random1_time}",
           "path": "flow://flows/random1",
           "expiry": "11:00"
         },
         {
+          "default_time": "15:00",
           "time": "${random2_time}",
           "path": "flow://flows/random2",
           "expiry": "11:00"
         },
         {
+          "default_time": "15:00",
           "time": "${random3_time}",
           "path": "flow://flows/random3"
         }
