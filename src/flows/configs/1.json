@@ -4,13 +4,14 @@
     "elements": [
         {
             "type": "Text",
-            "text": "Choose when you want to be notified for random1 survey."
+            "text": "Choose when you want to be notified for random3 survey. Time should be between 1pm and 4pm"
         },
         {
             "type": "Time",
-            "open": "03:00",
-            "close": "06:00",
+            "open": "13:00",
+            "close": "16:00",
             "variable_name": "global://random1_time"
         }
-    ]
+    ],
+    "navigation_conditions": ["wait_for_correct"]
 }
