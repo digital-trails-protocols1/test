@@ -8,6 +8,7 @@
         },
         {
             "type": "Time",
+            "default-time": "15:00",
             "open": "14:00",
             "close": "17:00",
             "variable_name": "global://random2_time"
