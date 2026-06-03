@@ -6,7 +6,8 @@
 			"text":"Default Height"
 		},
         {
-            "type": "Entry"
+            "type": "Entry",
+			"variable_name": "entry_input"
         },
 		{
 			"type":"Text",
